@@ -1,0 +1,9 @@
+.venue {
+    margin-top: 30px;
+}
+.venue__title {
+    font-weight: 700;
+}
+.venue__name {
+    font-size: 18px;
+}

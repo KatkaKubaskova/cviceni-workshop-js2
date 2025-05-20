@@ -1,0 +1,9 @@
+.instructor {
+    margin-top: 30px;
+}
+.instructor__title {
+    font-weight: 700;
+}
+.instructor__name {
+    font-size: 18px;
+}
