@@ -1,11 +1,10 @@
 import './index.css'
 
-export const Instructor = (props) => {
-    return (
-        <div className='instructor'>
-            <p className='instructor__title'>Lektorka:</p> 
-            <p className='instructor__name'>{props.name} - {props.profession} </p>
-            <p>{props.bio} </p>
-        </div>
-    )
-}
+export const Instructor = ({ name, bio, email }) => (
+  <section>
+    <h2>Instruktor</h2>
+    <p><strong>Jméno:</strong> {name}</p>
+    <p>{bio}</p>
+    <p><strong>E-mail:</strong> <a href={`mailto:${email}`}>{email}</a></p>
+  </section>
+);

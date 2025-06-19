@@ -1,11 +1,10 @@
 import './index.css'
 
-export const Venue = (props) => {
-    return (
-        <div className='venue'>
-            <p className='venue__title'>Místo konání:</p>
-            <p className='venue__name'>{props.name} {props.city}, {props.street}</p>
-            <p>{props.instructions}</p>    
-        </div>
-    )
-} 
+export const Venue = ({ name, city, address }) => (
+  <section>
+    <h2>Místo konání</h2>
+    <p><strong>{name}</strong></p>
+    <p>{address}</p>
+    <p>{city}</p>
+  </section>
+);

@@ -1,22 +1,12 @@
 import './index.css'
 
-export const WorkshopIntro = (props) => {
-    const formatDate = (apiDate) => {
-        const date = new Date(apiDate)
-        const day = date.getDate()
-        const month = date.getMonth() + 1
-        const year = date.getFullYear()
-        return `${day}. ${month}. ${year}`
-    }
-
-    return (
-        <header>
-            <h1>{props.title}</h1>
-            <h2>{props.description}</h2>
-            <div className='date'>
-                <p>{formatDate(props.date)}, {props.startTime}</p>
-                <p>{props.name}, {props.city}</p> 
-            </div>
-            <p className='intro'>{props.intro}</p>
-        </header>)
-}
+export const WorkshopIntro = ({ title, description, date, price, capacity, tags }) => (
+  <section>
+    <h1>{title}</h1>
+    <p>{description}</p>
+    <p><strong>Datum:</strong> {date}</p>
+    <p><strong>Cena:</strong> {price} Kč</p>
+    <p><strong>Kapacita:</strong> {capacity} účastníků</p>
+    <p><strong>Témata:</strong> {tags.join(', ')}</p>
+  </section>
+);
